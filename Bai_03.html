@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_03</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function sumOfListPrime(x) {
+        let sum = 0
+        let listPrime = []
+        for (let i = 2; i <= x; i++) {
+            let isPrime = true
+            if (i === 2) {
+                isPrime = true
+            } else {
+                for (let j = 2; j < i; j++) {
+                    if (i % j === 0) {
+                        isPrime = false
+                        break
+                    }
+                }
+            }
+            if (isPrime === true) {
+                listPrime.push(i)
+        }
+        }
+        for (let i = 0; i < listPrime.length; i++) {
+            sum += listPrime[i]
+        }
+        console.log(sum)
+        return sum
+    }
+    sumOfListPrime(1000)
+</script>

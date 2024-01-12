@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_02</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function insertNumberToArray(arr, x, index) {
+        let newArr = [];
+        if (arr[index] < 0 || arr[index] > arr.length) {
+            console.log(arr)
+            return arr
+        } else {
+            for (let i = 0; i < index ; i++) {
+                newArr.push(arr[i])
+            }
+            newArr.push(x)
+            for (let i = index + 1; i < arr.length; i++) {
+                newArr.push(arr[i])
+            }
+            console.log(newArr)
+            return newArr
+        }
+    }
+    insertNumberToArray([1,2,3,4,5], 2, 3)
+</script>
