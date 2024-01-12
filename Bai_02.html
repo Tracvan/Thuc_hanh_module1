@@ -11,8 +11,7 @@
 <script>
     function insertNumberToArray(arr, x, index) {
         let newArr = [];
-        if (arr[index] < 0 || arr[index] > arr.length) {
-            console.log(arr)
+        if (index < 0 || index > arr.length) {
             return arr
         } else {
             for (let i = 0; i < index ; i++) {
@@ -22,7 +21,6 @@
             for (let i = index + 1; i < arr.length; i++) {
                 newArr.push(arr[i])
             }
-            console.log(newArr)
             return newArr
         }
     }
